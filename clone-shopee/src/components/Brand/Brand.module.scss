@@ -1,0 +1,15 @@
+.section-brand {
+    margin: 20px 0 0;
+    background-color: var(--white-color);
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    .body-right {
+        flex-grow: 1;
+    }
+    .body-left {
+        width: 800px;
+    }
+}

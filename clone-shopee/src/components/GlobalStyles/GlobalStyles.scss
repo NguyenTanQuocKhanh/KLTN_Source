@@ -1,0 +1,267 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swaps');
+
+:root {
+    --red: 238;
+    --green: 77;
+    --blue: 45;
+    --primary-color: rgb(var(--red) var(--green) var(--blue));
+    --primary-light-color: rgba(255, 87, 34, 0.1);
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    //--text-light-color: #0000008a;
+    //--text-light-color: rgba(0, 0, 0, 0.6);
+    //--text-light-color:rgba(0,0,0,.4);
+    --text-light-color: #888;
+    --border-btn-color: rgba(0, 0, 0, 0.09);
+    --border-color: #eaeaea;
+    --border-img-color: #dbdbdb;
+    --border-btn-primary: #e5310d;
+    --background-color-hover: #f1f1f1;
+    --background-color-hover-light-primary: #fff6f7;
+    --background-color-hover-primary: #ee5f43;
+    --color-rating: #ffce3d;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    /* tất cả các tag điều kế thừa thằng box-sizing trong html(tag to nhất trong DOM) */
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    /* Trong lúc font Roboto chưa tải về thì sẽ lấy sans-serif */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.app__container {
+    background-color: #f5f5f5;
+}
+
+.app__content {
+    padding: 20px 0 0;
+}
+
+/* Responsive */
+.grid {
+    min-width: 1200px;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+/* Test responsive */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3333%;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Dropdown list
+.select-input {
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+.select-input::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 32px;
+    right: 0;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    min-width: 200px;
+    line-height: 30px;
+    margin: 2px 0 0 0;
+    padding: 0 0 6px 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px #d0c8c8;
+    background-color: var(--white-color);
+    display: none;
+    z-index: 1;
+}
+
+.select-input__item {
+    font-size: 1.4rem;
+    padding: 10px 0 0 12px;
+    color: var(--text-color);
+}
+
+.select-input__item:first-child {
+    border-radius: 2px 2px 0 0;
+}
+
+.select-input__item:last-child {
+    border-radius: 0 0 2px 2px;
+}
+
+.select-input__item:hover {
+    color: var(--primary-color);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.pagination-item {
+    margin: 0 15px;
+}
+.pagination-item--active div {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.pagination-item--active a:hover {
+    color: var(--white-color);
+    background-color: var(--background-color-hover-primary);
+}
+.pagination-item:first-child {
+    margin-left: 0;
+    background-color: transparent;
+}
+.pagination-item:last-child {
+    margin-right: 0;
+    background-color: transparent;
+}
+.pagination-item__icon {
+}
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    min-width: 40px;
+    height: var(--height);
+    font-size: 1.8rem;
+    line-height: var(--height);
+    text-align: center;
+    color: rgb(102 102 102 / 87%);
+    border-radius: 2px;
+}
+
+.pagination-item__link:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+// Banner Carousel
+.control-arrow {
+    width: 35px;
+    height: 60px;
+    top: 37% !important;
+}
+
+.carousel-slider {
+    border-radius: 2px;
+}
+
+.carousel .control-dots .dot {
+    opacity: 1;
+}
+
+// selected in carousel
+.selected {
+    background-color: var(--primary-color) !important;
+}
+
+// cart layout
+.card-layout {
+    background-color: var(--white-color);
+    padding: 0;
+    // margin-top: 20px;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+}

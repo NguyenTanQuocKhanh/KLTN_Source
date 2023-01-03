@@ -1,0 +1,39 @@
+// list item
+.carousel__item {
+    padding: 0;
+}
+.carousel__item-group {
+}
+// link
+.carousel__item-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.12);
+        box-shadow: 0 0 0.8125rem 0 rgb(0 0 0 / 5%);
+    }
+}
+.carousel__item-grid__img {
+    width: 100%;
+}
+.carousel__item-grid__title {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 500;
+    height: 2rem;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    text-align: center;
+    margin: 10px 0;
+
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}

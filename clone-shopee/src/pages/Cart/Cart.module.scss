@@ -1,0 +1,346 @@
+.cart-container {
+    //no item
+    .cart-empty-swap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        .cart-empty_img {
+            width: 150px;
+        }
+        .cart-empty_text {
+            font-size: 1.4rem;
+            color: var(--text-light-color);
+            margin: 18px 0;
+        }
+        .cart-empty_btn {
+            width: 160px;
+            height: 40px;
+            font-size: 1.6rem;
+        }
+    }
+
+    //have item
+    .card-swap {
+        font-size: 14px;
+        background: #fff;
+        color: var(--text-light-color);
+        padding: 20px;
+        margin: 0 12px;
+        box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+        border-radius: 4px;
+    }
+
+    .cart-swap {
+        padding: 10px 0;
+
+        .cart-swap-header {
+            display: flex;
+            align-items: center;
+            .cart-swap-header_item {
+                font-size: 1.4rem;
+                line-height: 1.5rem;
+                text-align: center;
+
+                .cart-swap-header_item-checkbox {
+                    width: 20px;
+                    height: 20px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &:checked {
+                        accent-color: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        .separate {
+            border-top: 1px solid rgba(0, 0, 0, 0.09);
+            margin: 20px 0;
+        }
+
+        .cart-swap-main {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .cart-main-item {
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .item-checkbox {
+                    .item-checkbox-input {
+                        width: 20px;
+                        height: 20px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        &:checked {
+                            accent-color: var(--primary-color);
+                        }
+                    }
+                }
+                .item-info-group {
+                    display: flex;
+                    align-items: center;
+                    .item-info-group_img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    .item-info-group_name {
+                        padding: 0 10px;
+                        line-height: 2rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        flex: 1;
+                    }
+                    .item-info-group_type {
+                        width: 170px;
+                        float: left;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        .item-info-group_type-title {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            color: var(--text-light-color);
+
+                            .item-info-group_type-btn {
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;
+                                border-top: 5px solid rgba(0, 0, 0, 0.54);
+                                border-bottom: 0;
+                                background: none;
+                                padding: 0;
+                                margin-left: 5px;
+                                transition: transform 0.1s cubic-bezier(0.4, 0, 0.6, 1);
+                                transform: rotate(0);
+                            }
+                        }
+                        .item-info-group_type-content {
+                            color: var(--text-color);
+                            margin-top: 5px;
+                        }
+                        //headless-tippy
+                        .headless-tippy {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            position: relative;
+                            top: -10px;
+
+                            .headless-tippy-arrow-outer {
+                                position: relative;
+                                bottom: -1px;
+                                width: 0;
+                                height: 0;
+                                border-left: 10px solid transparent;
+                                border-right: 10px solid transparent;
+                                border-bottom: 10px solid rgba(0, 0, 0, 0.09);
+
+                                .headless-tippy-arrow-inner {
+                                    position: absolute;
+                                    bottom: -10px;
+                                    left: -8px;
+                                    width: 0;
+                                    height: 0;
+                                    border-left: 8px solid transparent;
+                                    border-right: 8px solid transparent;
+                                    border-bottom: 8px solid #fff;
+                                }
+                            }
+                            .headless-tippy-main {
+                                border-color: rgba(0, 0, 0, 0.09);
+                                box-shadow: 0 5px 10px 0 rgb(0 0 0 / 9%);
+                                border-radius: 4px;
+                                border: 1px solid rgba(0, 0, 0, 0.09);
+                                background-color: var(--white-color);
+
+                                .headless-tippy-container {
+                                    width: 330px;
+                                    padding: 20px 25px;
+                                    .headless-tippy_content {
+                                        .group-color-swapper {
+                                            display: flex;
+                                            flex-direction: column;
+                                            margin-bottom: 15px;
+                                            .group-color-label {
+                                                font-size: 1.4rem;
+                                                color: var(--text-light-color);
+                                                margin-bottom: 10px;
+                                            }
+                                            .group-color-list {
+                                                display: flex;
+                                                flex-wrap: wrap;
+
+                                                .group-color-list__item {
+                                                    position: relative;
+                                                    margin-right: 5px;
+                                                    margin-bottom: 5px;
+                                                    background-color: var(--white-color);
+                                                    &:hover {
+                                                        border: 1px solid var(--primary-color);
+                                                        color: var(--primary-color);
+                                                        background-color: var(--white-color);
+                                                    }
+
+                                                    &.active {
+                                                        border: 1px solid var(--primary-color);
+                                                        color: var(--primary-color);
+
+                                                        .group-color-list__item--tick {
+                                                            width: 16px;
+                                                            height: 16px;
+                                                            position: absolute;
+                                                            overflow: hidden;
+                                                            right: 0;
+                                                            bottom: 0;
+
+                                                            &::before {
+                                                                content: '';
+                                                                position: absolute;
+                                                                right: 0;
+                                                                bottom: 0;
+                                                                border: 8px solid transparent;
+                                                                border-right: 8px solid var(--primary-color);
+                                                                border-bottom: 8px solid var(--primary-color);
+                                                            }
+
+                                                            .group-color-list__item-icon {
+                                                                position: absolute;
+                                                                bottom: -1px;
+                                                                right: 0;
+                                                                color: var(--white-color);
+                                                                font-size: 11px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .headless-tippy_footer {
+                                        display: flex;
+                                        justify-content: space-between;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .item-price {
+                    display: flex;
+                    justify-content: center;
+                    .item-price_old {
+                        text-decoration: line-through;
+                    }
+                    .item-price_new {
+                        color: var(--text-color);
+                        margin-left: 10px;
+                    }
+                }
+
+                // item quantity select
+                .group-quantity-swapper {
+                    display: flex;
+                    justify-content: center;
+
+                    .group-quantity-select {
+                        display: flex;
+                        border: 1px solid rgba(0, 0, 0, 0.09);
+                        border-radius: 2px;
+
+                        .group-quantity-select__input {
+                            font-size: 1.5rem;
+                            border: none;
+                            padding: 0 5px;
+                            width: 50px;
+                            text-align: center;
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        .group-quantity-select__btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 32px;
+                            height: 32px;
+                            border: none;
+                            cursor: pointer;
+                            color: var(--text-light-color);
+                            background-color: var(--white-color);
+
+                            &:hover {
+                                background-color: var(--background-color-hover);
+                            }
+
+                            &.group-quantity-select__btn-left {
+                                border-right: 1px solid rgba(0, 0, 0, 0.09);
+                            }
+                            &.group-quantity-select__btn-right {
+                                border-left: 1px solid rgba(0, 0, 0, 0.09);
+                            }
+                        }
+                    }
+                }
+
+                .item-total {
+                    color: var(--primary-color);
+                }
+                .item-action-group {
+                    .item-action-group_action {
+                        cursor: pointer;
+                        &:hover {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .cart-swap-footer {
+            display: flex;
+            align-items: center;
+            .cart-swap-footer_item {
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                text-align: center;
+
+                &:hover.cart-swap-footer_item--active {
+                    cursor: pointer;
+                    color: var(--primary-color);
+                }
+
+                .cart-swap-footer_item-price {
+                    color: var(--primary-color);
+                    margin-left: 8px;
+                    font-size: 2rem;
+                }
+
+                .cart-swap-footer_item-checkbox {
+                    width: 20px;
+                    height: 20px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &:checked {
+                        accent-color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+}

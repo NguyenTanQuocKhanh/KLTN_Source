@@ -1,0 +1,121 @@
+/* Category */
+.category {
+    border-radius: 2px;
+
+    .category__heading {
+        color: var(--text-color);
+        font-size: 1.7rem;
+        padding: 12px 16px;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        .category__heading-icon {
+            font-size: 1.4rem;
+            margin-right: 4px;
+            position: relative;
+            top: -1px;
+        }
+    }
+
+    .category-list {
+        padding: 0 0 10px 30px;
+        list-style: none;
+
+        .category-item {
+            padding: 8px 0;
+
+            &.category-item--active {
+                .category-item__link {
+                    color: var(--primary-color);
+                    font-weight: 500;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        /* của thằng chứa nó */
+                        top: 50%;
+                        /* so vơi chính nó */
+                        transform: translateY(-50%);
+                        left: -7px;
+                        border: 1px solid;
+                        border-width: 4px;
+                        border-color: transparent transparent transparent var(--primary-color);
+                    }
+                }
+            }
+
+            .category-item__link {
+                position: relative;
+                font-size: 1.4rem;
+                color: var(--text-color);
+                text-decoration: none;
+                display: block;
+                transition: right linear 0.1s;
+                right: 0;
+
+                &:hover {
+                    right: -4px;
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+
+.brand-group {
+    padding-top: 18px;
+    padding-left: 16px;
+    color: var(--text-color);
+    // border-top: 1px solid rgba(0, 0, 0, 0.1);
+    .brand-header {
+        font-size: 1.6rem;
+    }
+    .brand-list {
+        list-style: none;
+        padding: 0;
+    }
+    .brand-item {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        padding: 8px 0;
+        cursor: pointer;
+
+        &.brand-item--active {
+            .brand-item__checkbox {
+                color: red;
+            }
+        }
+        .brand-item__checkbox {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.26);
+            font-size: 1.3rem;
+        }
+        .brand-item__link {
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .brand-item__input {
+            width: 80px;
+            height: 30px;
+            padding-left: 5px;
+            color: var(--text-light-color);
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.26);
+            border-radius: 0.125rem;
+            box-shadow: inset 0 1px 0 0 rgb(0 0 0 / 5%);
+        }
+        .brand-item__icon {
+            padding: 0 4px;
+        }
+    }
+}
+
+.custom-button {
+    width: 100%;
+    margin-bottom: 18px;
+}

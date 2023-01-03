@@ -1,0 +1,222 @@
+//have item
+.card-swap {
+    font-size: 14px;
+    background: #fff;
+    color: var(--text-light-color);
+    padding: 20px;
+    margin: 0 12px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+    border-radius: 4px;
+}
+
+.container {
+    padding: 10px 0;
+    .card-address-swap {
+        .card-address-swap_header {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            padding-top: 10px;
+            padding-bottom: 30px;
+
+            .header-logo {
+            }
+            .header-title {
+                margin-left: 10px;
+            }
+        }
+        .card-address-swap_content {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            // padding-top: 20px;
+
+            .content-info {
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                color: var(--black-color);
+                font-weight: bold;
+            }
+
+            .content-location {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 1;
+                color: var(--text-color);
+
+                .content-location_detail {
+                }
+                .content-location_default {
+                    flex-shrink: 0;
+                    height: 25px;
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+                    padding: 5px 5px;
+                    color: var(--primary-color);
+                    background-color: #fff;
+                    border: 1px solid var(--primary-color);
+                }
+            }
+
+            .content-action {
+                width: 100px;
+                &:hover {
+                    cursor: pointer;
+                    color: var(--primary-color);
+                }
+                span {
+                    float: right;
+                }
+            }
+        }
+    }
+
+    .card-main-swap {
+        margin: 10px;
+
+        .card-main-swap_header {
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            .header-name {
+                color: var(--black-color);
+                font-size: 1.8rem;
+            }
+            .header-item {
+                color: var(--text-light-color);
+                font-size: 1.6rem;
+            }
+        }
+
+        .card-main-container {
+            .card-main-swap_content {
+                display: flex;
+                align-items: center;
+                font-size: 1.4rem;
+                padding-bottom: 10px;
+                .content-info {
+                    display: flex;
+                    align-items: center;
+                    .content-info_img {
+                    }
+                    .content-info_name {
+                        margin: 0 20px;
+                        color: var(--black-color);
+                        line-height: 1.8rem;
+                    }
+                }
+                .content-model {
+                    color: var(--text-light-color);
+                }
+                .content-price {
+                    color: var(--primary-color);
+                }
+                .content-quantity {
+                    color: var(--black-color);
+                }
+                .content-total {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .card-payment-swap {
+        .card-payment-swap_header {
+            display: flex;
+            align-items: center;
+            padding: 10px 0 30px 0;
+            .header-title {
+                color: var(--black-color);
+                font-size: 1.8rem;
+            }
+            .group-color-list {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 5px;
+                .group-color-list__item {
+                    position: relative;
+                    margin-right: 10px;
+                    background-color: var(--white-color);
+                    &:hover {
+                        border: 1px solid var(--primary-color);
+                        color: var(--primary-color);
+                        background-color: var(--white-color);
+                    }
+
+                    &.active {
+                        border: 1px solid var(--primary-color);
+                        color: var(--primary-color);
+
+                        .group-color-list__item--tick {
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            overflow: hidden;
+                            right: 0;
+                            bottom: 0;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                border: 8px solid transparent;
+                                border-right: 8px solid var(--primary-color);
+                                border-bottom: 8px solid var(--primary-color);
+                            }
+
+                            .group-color-list__item-icon {
+                                position: absolute;
+                                bottom: -1px;
+                                right: 0;
+                                color: var(--white-color);
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card-payment-swap_main {
+        background-color: #fffdf5;
+        padding: 30px 0;
+        border-top: 1px dashed rgba(0, 0, 0, 0.09);
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.09);
+
+        .main-detail {
+            display: flex;
+            color: var(--black-color);
+            font-size: 1.6rem;
+
+            &:last-child {
+                margin-top: 30px;
+            }
+            .main-detail_label {
+            }
+            .main-detail_total {
+                &.final {
+                    font-size: 3rem;
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .card-payment-swap_footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 10px 0;
+        .footer_btn {
+            width: 200px;
+            height: 40px;
+        }
+    }
+}

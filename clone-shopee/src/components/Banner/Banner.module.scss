@@ -1,0 +1,46 @@
+// sidebar-banner
+$height-banner: 240px;
+.banner-swapper {
+    display: flex;
+    align-items: center;
+}
+.banner-carousel {
+    flex: 1;
+}
+
+.banner-carousel-item {
+    // height: $height-banner;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    // background-position: center;
+}
+
+.side-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: $height-banner;
+    margin-left: 4px;
+}
+
+.side-banner-item {
+    height: $height-banner/2-2;
+    border-radius: 2px;
+}
+
+// simple banner
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0;
+}
+
+.banner-section {
+    height: 97px;
+    width: 395px;
+    border-radius: 8px;
+}
+
+//slider-banner

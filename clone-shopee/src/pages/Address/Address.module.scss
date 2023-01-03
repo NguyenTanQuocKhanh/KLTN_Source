@@ -1,0 +1,118 @@
+.container {
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 13%);
+    padding: 0 30px;
+}
+
+// header
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 0;
+}
+
+.header-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.header-button-icon {
+    height: 1.8rem;
+    margin-right: 12px;
+}
+
+// body
+.body {
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0 0 20px;
+}
+
+.item-left {
+    flex: 1;
+}
+
+.item-left-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-left__label {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+    color: rgb(85 85 85 / 80%);
+    margin-right: 25px;
+}
+.item-left__content {
+    display: flex;
+    align-items: center;
+    width: 460px;
+}
+.item-left__text {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-right: 10px;
+}
+.item-left__button {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--white-color);
+    background-color: #00bfa5;
+}
+
+.item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    width: 280px;
+}
+
+.item-right-control {
+    display: flex;
+}
+
+.item-right-control__edit {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: var(--text-light-color);
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.item-right-control__remove {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: var(--text-light-color);
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.item-right__button {
+    border: 1px solid var(--border-btn-color);
+    background-color: var(--white-color);
+}

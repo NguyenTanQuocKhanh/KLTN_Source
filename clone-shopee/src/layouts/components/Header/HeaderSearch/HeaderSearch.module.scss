@@ -1,0 +1,38 @@
+/* header with search */
+.header-with-search {
+    height: var(--header-with-search-height);
+    display: flex;
+    align-items: center;
+    margin: 0 8px; /*= với margin của text trong  header__navbar-item*/
+}
+
+.header-search-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.header__logo {
+    width: 135px;
+}
+.header__logo-name {
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: 3rem;
+    height: 3rem;
+    color: var(--primary-color);
+    margin: 8px 0 0 15px;
+    padding: 0 0 0 15px;
+    border-left: 1px solid var(--primary-color);
+}
+
+/* phòng 1 số trình duyệt cũ */
+.header__logo-link {
+    color: transparent;
+    text-decoration: none;
+}
+
+.header__logo-img {
+    width: 150px;
+}

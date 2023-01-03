@@ -1,0 +1,90 @@
+/* Footer */
+.footer {
+    padding-top: 16px;
+    border-top: 4px solid var(--primary-color);
+    background-color: var(--white-color);
+}
+.footer__heading {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.footer-list {
+    padding: 0;
+    list-style: none;
+}
+.footer-item {
+    margin-bottom: 12px;
+}
+.footer-item__icon {
+    font-size: 1.6rem;
+    color: black;
+    margin-right: 10px;
+}
+.footer-item__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #666;
+    padding: 2px 0;
+}
+.footer-item__link:hover {
+    color: var(--primary-color);
+}
+
+.footer__download {
+    display: flex;
+}
+.footer__download-qr {
+    border: 2px solid rgba(0, 0, 0, 0.09);
+    margin-right: 20px;
+    // width: 86px;
+}
+.footer__download-apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer__download-apps-img {
+    width: 80px;
+    height: 20px;
+}
+.footer-bottom {
+    width: 100%;
+    padding: 40px 0;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    color: #666;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.footer-copyright {
+    margin: 0 25px 0 0;
+    width: 30%;
+}
+.footer-cultures {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.footer-cultures__title {
+    margin: 0;
+}
+.footer-cultures__name a {
+    display: block;
+    margin-left: auto;
+    padding: 0 5px;
+    color: #666;
+    text-decoration: none;
+}
+.footer-cultures__name {
+    border-right: 1px solid #666;
+}
+.footer-cultures__name:last-child {
+    border-right: none;
+}

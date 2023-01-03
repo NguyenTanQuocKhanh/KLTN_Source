@@ -1,0 +1,30 @@
+.top-search-header {
+    display: flex;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.top-search-header__title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+.top-search-header__link {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-decoration: none;
+    color: var(--primary-color);
+
+    .top-search-header__link-icon {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: var(--white-color);
+        background-color: red;
+        margin-left: 5px;
+    }
+}

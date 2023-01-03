@@ -1,0 +1,13 @@
+.category-header {
+    display: flex;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.category-header__title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--text-light-color);
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+

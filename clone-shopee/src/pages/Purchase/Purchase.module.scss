@@ -1,0 +1,174 @@
+.cart {
+    background-color: var(--white-color);
+    box-shadow: 0 0px 3px 0 rgb(0 0 0 / 13%);
+    border-radius: 3px;
+
+    &.bs-t {
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 13%);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .header-item {
+        flex: 1;
+        font-size: 1.6rem;
+        color: var(--text-color);
+        padding: 19px 0;
+        text-align: center;
+
+        &.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        span:hover {
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+    }
+}
+
+.search-swap {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    margin: 12px 0;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+    color: #212121;
+    background: #eaeaea;
+    border-radius: 3px;
+
+    .search-icon {
+        margin: 0 15px;
+        color: #bbb;
+        height: 19px;
+    }
+    .search-input {
+        flex: 1;
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+        border: 0;
+        outline: none;
+        background-color: inherit;
+        color: var(--text-color);
+    }
+}
+
+.item-top-container {
+    margin-bottom: 10px;
+    .item-top-swap {
+        padding: 12px 24px;
+        .top-header {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            text-align: right;
+            padding-bottom: 12px;
+        }
+        .top-main {
+            .top-main-item {
+                display: flex;
+                align-items: center;
+                padding-top: 12px;
+                .item-img {
+                    //background-image: url(https://cf.shopee.vn/file/sg-11134201-22110-e3njur9xh9jv80_tn);
+                    // background-position: 50%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 80px;
+                    width: 80px;
+                }
+                .item-info {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 24px 0 12px;
+
+                    .item-info_name {
+                        font-size: 1.6rem;
+                        line-height: 2.1rem;
+                        color: var(--text-color);
+                        margin-bottom: 5px;
+                    }
+                    .item-info_type {
+                        font-size: 1.4rem;
+                        color: var(--text-light-color);
+                        margin-bottom: 3px;
+                    }
+                    .item-info_quantity {
+                        font-size: 1.4rem;
+                        color: var(--text-color);
+                    }
+                }
+                .item-price {
+                    display: flex;
+                    font-size: 1.4rem;
+                    .item-price_old {
+                        color: var(--text-light-color);
+                        text-decoration: line-through;
+                        margin-right: 5px;
+                    }
+                    .item-price_new {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .item-bottom-swap {
+        background-color: #fffdf5;
+        border-top: 1px dashed rgba(0, 0, 0, 0.09);
+        padding: 24px;
+        .bottom-header {
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 24px;
+            .bottom-header_label {
+                color: var(--text-color);
+                font-size: 1.4rem;
+                margin-right: 10px;
+            }
+            .bottom-header_total {
+                color: var(--primary-color);
+                font-size: 2.4rem;
+            }
+        }
+        .bottom-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .bottom-control-status {
+                font-size: 1.4rem;
+                color: var(--text-light-color);
+            }
+
+            .bottom-control-group_btnRebuy {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.cart-empty-swap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    height: 600px;
+    .cart-empty-swap_logo {
+        width: 100px;
+    }
+    .cart-empty-swap_text {
+        font-size: 1.8rem;
+        color: var(--text-color);
+        margin-top: 20px;
+    }
+}
